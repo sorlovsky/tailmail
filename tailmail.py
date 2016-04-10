@@ -147,7 +147,7 @@ def main():
   # If want to clean the entire mailbox, use history_id = 1
   history_id = updateHistoryId(service, 1)
   while True:
-    time.sleep(40)
+    time.sleep(1800)
     # Waits again before executing the new list of history
     messageId = historyUpdate(service, history_id)
     for message in messageId:
@@ -155,7 +155,7 @@ def main():
       archiveMsg(service, message)
 
 
-    time.sleep(40)
+    time.sleep(1800)
     # After the Inbox is clean, it's gonna wait until the history is updated
     history_id = updateHistoryId(service, history_id)
 
